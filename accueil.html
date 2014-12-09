@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8 / ISO 8859-1" />
+        <link rel="stylesheet" href="style.css" />
+		<!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <title>Visirx : Accueil </title>
+				<script type="text/javascript">
+		function date_heure(id)
+{
+        date = new Date;
+        annee = date.getFullYear();
+        moi = date.getMonth();
+        mois = new Array('Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Ao&ucirc;t', 'Septembre', 'Octobre', 'Novembre', 'D&eacute;cembre');
+        j = date.getDate();
+        jour = date.getDay();
+        jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+        resultat = jours[jour]+' '+j+' '+mois[moi]+' '+annee+'  | '+h+':'+m+':'+s;
+        document.getElementById(id).innerHTML = resultat;
+        setTimeout('date_heure("'+id+'");','1000');
+        return true;
+}
+		</script>
+    </head>
+ 
+    <body>
+	        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <img src="w7.jpg" alt="Logo" id="logo" />
+					<span id="date_heure" style="text-align:left"></span>
+						<script type="text/javascript" >window.onload = date_heure('date_heure');</script>
+                </div>
+                 
+                <nav>
+                    <ul>
+                        <li ><a href="" id="e"><strong>Accueil </strong></a></li>
+                        <li><a href="thermo.html" class="f">|  La thermographie |</a></li>
+						<li><a href="presentation.html" class="f">A propos de nous |</a></li>
+                        <li><a href="test.html" class="f">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+             
+            <div id="banniere_image">
+      				<div id="banniere_description">
+					Retrouver-nous aussi sur 
+					<a href="http://www.facebook.com" id="bouton_rouge"><img src="wass5.png" alt="" /></a>
+					<a href="http://www.twitter.com"><img src="t1.png" alt="" /></a>
+                    <marquee direction="left" scrollamount="4" width="677";>
+					<font face="Trebuchet MS" size="3" color="#FF00FF">VISirX  </font>
+					<font face="Verdana" size="2"> est une entreprise Tunisienne dont le principal domaine d’activité 
+					est la haute technologie (hi-tech) destinée au marché de contrôle non destructif par 
+					vision infrarouge thermique.</font>
+
+</marquee>                   
+                </div>
+            </div>
+             
+            <section>
+                <aside id='aside1'>
+                    
+                </aside>
+	
+                <aside>
+                    
+                </aside>
+		<aside id='aside2'>
+                    
+                </aside>
+		<aside class='aside7'>
+		<p class='p1'><strong>Le contrôle non destructif : </strong> caractériser l'état 		d'intégrité de structures ou de matériaux, sans les dégrader, soit au cours de la 		production, soit en cours d'utilisation, soit dans le cadre de maintenances</p></aside>
+		<aside class='aside7'><p class='p1'><strong>Maintenance  : </strong>Mettre en évidence, dans les infrastructures électriques en charge, des échauffements pouvant avoir diverses origines </p></aside>
+		<aside class='aside7'>
+			<p class='p1'><strong>La Thermographie </strong>permet l’estimation de la qualité d’un
+équipement ou d’une installation en exploitation normale, et de prévenir les irrégularités
+de fonctionnement bien avant les pannes effectives</p></aside>
+		<aside id='aside3'>
+                    
+                </aside>
+<aside id='aside4'>
+                    
+                </aside>
+		<aside id='aside5'>
+                    
+                </aside>
+				
+		</section>
+             
+  
+            <footer>
+                
+______________________________________________________________________________________________________________
+				<div id="mes_amis">
+                    <h7>© Visirx 2012–2013</h7>
+                    <ul>
+                        <li><a href="legal.html">infos légales</a> |</li>
+                        
+                       
+                        <li><a href="service.html">services</a> |</li>
+						<li><a href="test.html">contact</a></li>
+                    </ul>
+                    
+                </div>
+
+                
+                
+            </footer>
+        </div>
+    </body>
+</html>

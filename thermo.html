@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style1.css" />
+		<!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <title>Visirx : Les bases de la thermographie infrarouge</title>
+		 	<script type='text/javascript'>
+		function date_heure(id)
+{
+        date = new Date;
+        annee = date.getFullYear();
+        moi = date.getMonth();
+        mois = new Array('Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Ao&ucirc;t', 'Septembre', 'Octobre', 'Novembre', 'D&eacute;cembre');
+        j = date.getDate();
+        jour = date.getDay();
+        jours = new Array('Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+        resultat = jours[jour]+' '+j+' '+mois[moi]+' '+annee+'  | '+h+':'+m+':'+s;
+        document.getElementById(id).innerHTML = resultat;
+        setTimeout('date_heure("'+id+'");','1000');
+        return true;
+}
+</script>
+		 <script type='text/javascript'>
+var rotate_delay = 100;
+current = 0;
+function next() {
+if (document.slideform.slide[current+1]) {
+document.images.show.src = document.slideform.slide[current+1].value;
+document.slideform.slide.selectedIndex = ++current;
+   }
+else first();
+}
+function previous() {
+if (current-1 >= 0) {
+document.images.show.src = document.slideform.slide[current-1].value;
+document.slideform.slide.selectedIndex = --current;
+   }
+else last();
+}
+function first() {
+current = 0;
+document.images.show.src = document.slideform.slide[0].value;
+document.slideform.slide.selectedIndex = 0;
+}
+function last() {
+current = document.slideform.slide.length-1;
+document.images.show.src = document.slideform.slide[current].value;
+document.slideform.slide.selectedIndex = current;
+}
+function ap(text) {
+document.slideform.slidebutton.value = (text == "Stop") ? "Start" : "Stop";
+rotate();
+}
+function change() {
+current = document.slideform.slide.selectedIndex;
+document.images.show.src = document.slideform.slide[current].value;
+}
+function rotate() {
+if (document.slideform.slidebutton.value == "Stop") {
+rotate_delay= (current == 0) ? 100 : 100;
+current = (current == document.slideform.slide.length-1) ? 0 : current+1;
+document.images.show.src = document.slideform.slide[current].value;
+document.slideform.slide.selectedIndex = current;
+window.setTimeout("rotate()", rotate_delay);
+   }
+}
+//  End -->
+</script>
+		
+    </head>
+ 
+    <body onLoad='ap(this.value)';>
+	        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <img src="w7.jpg" alt="Logo" id="logo" />
+												<span id="date_heure" style="text-align:left"></span>
+						<script type="text/javascript" >window.onload = date_heure('date_heure');</script>
+                </div>
+                 
+                <nav>
+                    <ul>
+                        <li ><a href="accueil.html" class="f">Accueil |</a></li>
+                        <li><a href="" id="e">  La thermographie </a></li>
+						<li><a href="presentation.html" class="f">| A propos de nous </a></li>
+                        <li><a href="test.html" class="f">|  Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+             
+            <div id="banniere_image2">
+      				<div id="banniere_description">
+					Retrouver-nous aussi sur 
+					<a href="http://www.facebook.com" id="bouton_rouge"><img src="wass5.png" alt="" /></a>
+					<a href="http://www.twitter.com"><img src="t1.png" alt="" /></a>
+                    <marquee direction="left" scrollamount="4" width="677";>
+					<font face="Trebuchet MS" size="3" color="#FF00FF">VISirX  </font>
+					<font face="Verdana" size="2"> est une entreprise Tunisienne dont le principal domaine d’activité 
+					est la haute technologie (hi-tech) destinée au marché de contrôle non destructif par 
+					vision infrarouge thermique.</font>
+
+</marquee>                   
+                </div>
+            </div>
+			<section>
+			<aside>
+     <p id="p2">La Thermographie</br></br></p>
+	 <ul>
+                        <li ><a href="" class="a"><strong>Les bases de la</br>thermographie infrarouge</strong></br></br></a></li>
+                        <li><a href="objectif.html" class="a">Objectifs</br></br></br></a></li>
+						<li><a href="principe.html" class="a">Principe</a></br></br></br></li>
+                    </ul>
+</aside>
+    <article>
+				<p class="t">Les bases de la thermographie infrarouge</p>
+				<p>
+				La thermographie infrarouge (TIR) fait référence à l'analyse des rayonnements thermiques
+				infrarouges émis à partir de la surface des objets. Ces radiations sont  acquises par un
+				imageur infrarouge et par la suite traitées sur un ordinateur
+				</p>
+				</article>
+<form name=slideform align=center>
+<table align=center >
+<tr>
+<td align=center style="background-color: transparent" width=700 height=400 >
+<img src="img4.png" name="show" width=700 height=400 align=center>
+</td>
+</tr>
+
+<tr>
+<td align=center bgcolor="#C0C0C0">
+<select name="slide" onChange="change();"hidden>
+<option value="img4.png">N°1
+<option value="shema.jpg">N°2
+</select>
+</td>
+</tr>
+<tr>
+<td align=center bgcolor="#C0C0C0" hidden>
+<input type=button onClick="first();" value="|<<" title="Beginning">
+<input type=button onClick="previous();" value="<<" title="Previous">
+<input type=button name="slidebutton" onMouseOut="ap(this.value);" value="Start" title="AutoPlay" hidden>
+<input type=button onClick="next();" value=">>" title="Next">
+<input type=button onClick="last();" value=">>|" title="End">
+</td>
+</tr>
+</table>
+</form>				
+				<div>
+				<p style="margin-left : 40px">Pour plus d'informations :</p> 
+				
+                        <nav id="info"><li ><ul><a href="http://visiooimage.com/en/products_ir_ndt_pulsed_thermography.htm" class="b">La thermographie optique pulsée |</a></li>
+                        <li><a href="http://visiooimage.com/en/products_ir_ndt_lockin_thermography.htm" class="b"> La thermographie optique lock-in |</a></li>
+						<li><a href="http://visiooimage.com/en/products_ir_ndt_ultrasound_thermography.htm" class="b">LA thermographie ultrasons |</a></li>
+						<li><a href="http://visiooimage.com/en/products_ir_ndt_inductive_thermography.htm" class="b">La thermographie inductive </a></li>
+						</ul>
+						</nav>
+                    
+</div>
+			</section>
+ <footer>
+                
+______________________________________________________________________________________________________________
+				<div id="mes_amis">
+                    <h7>© Visirx 2012–2013</h7>
+                    <ul>
+                        <li><a href="legal.html">infos légales</a> |</li>
+                        
+                        <li><a href="service.html">services</a> |</li>
+						<li><a href="test.html">contact</a></li>
+                    </ul>
+                    
+                </div>
+
+                
+                
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,279 @@
+font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot');
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body
+{
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+}
+ 
+#bloc_page
+{
+    width: 900px;
+    margin: auto;    
+	}
+section{
+box-shadow: 0px 4px 4px #1c1a19;
+border:solid 2px rgb(200,200,200);
+
+ }
+section h1, footer h1, nav a
+{
+    font-family: Dayrom, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+/* Header */
+ 
+header
+{
+    background: url('') repeat-x bottom;
+}
+ 
+#titre_principal
+{
+    display: inline-block;
+}
+ 
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+ 
+#logo, header h1
+{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+#date_heure
+{
+margin-left: 370px;
+}
+ 
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+nav
+{
+    display: inline-block;
+    width: 900px;
+    text-align: left;
+	box-shadow: 0px 4px 4px #1c1a19;
+	background-color: rgb(24,24,24); /* Pour les anciens navigateurs */
+    background-color: rgba(24,24,24,0.8);
+    
+	}
+ 
+nav ul
+{
+    list-style-type: none;
+}
+ 
+nav li
+{
+    display: inline-block;
+    margin-right: 1px;
+}
+ 
+nav a
+{
+    
+font-size: 1em;
+    
+padding-bottom: 0px;
+
+text-decoration: none;
+}
+ 
+nav a:hover
+{
+    color: rgb(190,0,0);
+    border-bottom: 3px solid #760001;
+}
+/* Bannière */
+ 
+#banniere_image
+{
+    margin-top: 0px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('header-auto.jpg') no-repeat;
+    position: relative;
+    box-shadow: 0px 4px 4px #1c1a19;
+    margin-bottom: 25px;
+}
+ 
+#banniere_description
+{
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgb(24,24,24); /* Pour les anciens navigateurs */
+    background-color: rgba(24,24,24,0.8);
+    color: white;
+    font-size: 0.8em;
+}
+ 
+ 
+/* Corps */
+ 
+#aside1,aside,#aside2,.aside7,#aside3,#aside4,#aside5
+{
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+margin-top: 35px;
+
+}
+#aside1{
+background: url('was.jpg') repeat-x;
+    margin-right: 15px;
+
+}
+
+ .ico_categorie
+{
+    vertical-align: middle;
+}
+aside
+{
+    position: relative;
+    width: 260px;
+	height: 160px;
+    background: url('was2.JPG') repeat-x;
+    /*background-color: #706b64;*/
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+}
+#aside2{
+background: url('inductive_thermography_bench.jpg') repeat-x;
+    margin-left: 15px;
+}
+#aside3{
+background: url('img6.png') repeat-x;
+    margin-right: 15px;
+	
+}
+#aside4{
+background: url('img7.png') repeat-x;
+    margin-right: 15px;
+}
+#aside5{
+background: url('was5.jpg') repeat-x;
+    margin-right: 15px;
+}
+.p1{
+font-size: 0.79em;
+color: rgb(192,2,2);
+}
+.aside7{
+background : none;
+width: 260px;
+margin-right: 15px;
+height: 100px;
+
+} 
+#e{
+color : red;
+}
+.f{
+color : white;
+} 
+
+
+/* Footer */
+ 
+footer
+{
+    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+    padding-top: 25px;
+margin-top: 50px;
+}
+ 
+footer p, footer ul
+{
+    font-size: 0.8em;
+}
+ 
+footer h7
+{
+    font-size: 0.7em;
+}
+ 
+#tweet, #mes_photos, #mes_amis
+{
+    display: inline-block;
+    vertical-align: top;
+}
+ 
+#tweet
+{
+    width: 28%;
+
+
+ 
+}
+#mes_amis{
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+ 
+
+ 
+#mes_photos img
+{
+    border: 1px solid #181818;
+    margin-right: 2px;
+}
+ 
+#mes_amis ul
+{
+    vertical-align: top;
+    margin-top: 0;
+    padding-left: 2px;
+}
+#mes_amis li {
+display: inline-block;
+}
+ 
+#mes_amis a
+{
+    text-decoration: none;
+    color: #760001;
+display: inline-block;
+}
+
